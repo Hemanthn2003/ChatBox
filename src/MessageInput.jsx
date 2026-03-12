@@ -5,7 +5,7 @@ import React from 'react'
 const MessageInput = ({ message, setMessage, texts, setTexts }) => {
   
   const handleSend = (texts)=>{
-  try{
+  try{    
     if(!texts.trim()) return;
 const textFormatted ={
         id:crypto.randomUUID(),

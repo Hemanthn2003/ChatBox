@@ -13,7 +13,7 @@ function App() {
   "id":2,
 "sender":"robot",
 "message":"Hi...how can i help you?"
-},
+},  
 {
   "id":3,
 "sender":"user",
