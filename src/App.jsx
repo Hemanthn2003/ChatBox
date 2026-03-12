@@ -1,42 +1,36 @@
 import { useState } from 'react'
 import './App.css'
 import MessageInput from './MessageInput'
+import MessageRender from './MessageRender'
+import{BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 function App() {
   const [texts, setTexts] = useState("")
-  const [message, setMessage] = useState([
-{
-  "id":1,
-"sender":"user",
-"message":"Hello"
-},
-{
-  "id":2,
-"sender":"robot",
-"message":"Hi...how can i help you?"
-},  
-{
-  "id":3,
-"sender":"user",
-"message":"Flip a coin"
-},
-{
-  "id":4,
-"sender":"robot",
-"message":"You got Heads!"
-}
-
-])
+  const [message, setMessage] = useState([])
 
 
   return (
-       <div>
-        {console.log(message)}
-          <MessageInput 
-          texts={texts} 
-          setTexts={setTexts} 
-          message={message} 
-          setMessage={setMessage}/>
+    <Router>  
+       <div className='mainsec'>
+          <Routes>
+         <Route path="/"
+                element={<>
+                        <div className='chatRenders'>
+                          <MessageRender message={message}/>
+                        </div> 
+     <div className='chatsInput'>
+             <MessageInput 
+                    texts={texts} 
+                    setTexts={setTexts} 
+                    message={message} 
+                    setMessage={setMessage}
+                    />
+                       </div>
+                        </>
+                } />
+          </Routes>
+          
        </div>
+       </Router>
   )
 }
 
