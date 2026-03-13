@@ -1,21 +1,24 @@
-<<<<<<< HEAD
-# React + Vite
+# ChatBox 🤖💬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ChatBox** is a simple chatbot web application built using **ReactJS**.
+The application allows users to send messages and receive automated replies based on predefined commands.
 
-Currently, two official plugins are available:
+This project demonstrates how to build a **basic conversational UI**, manage state in React, and simulate chatbot responses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 💬 Chat-style user interface
+* ⚡ Instant message rendering using React state
+* 🤖 Automated chatbot responses
+* 🎲 Fun commands like **flip a coin**
+* ⌨️ Send messages using **Enter key**
+* 📜 Auto-scroll to latest message
+* 📱 Responsive chat layout using **Flexbox**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
 # React ChatBox 💬🤖
 
 A simple **ChatBox application built using ReactJS and Vite** that simulates a conversation between a **user and a chatbot**.
@@ -33,76 +36,94 @@ This project demonstrates how a chatbot can receive a message from the user and 
 * 🔑 Unique message IDs using `crypto.randomUUID()`
 * 🧹 Input field clears after sending message
 * 🎯 Simple React component structure
+## 🧠 Supported Chat Commands
+
+The chatbot currently understands the following messages:
+
+| User Message             | Bot Response                            |
+| ------------------------ | --------------------------------------- |
+| `hello`, `hi`            | Hello! How can I help you?              |
+| `how are you`            | I'm doing great! How can I help you?    |
+| `flip a coin`            | Returns **Heads** or **Tails** randomly |
+| `roll a dice`            | Returns a number between **1–6**        |
+| `what is the date today` | Returns today's date                    |
+
+---
+
+## ⚠️ Default Responses
+
+If the chatbot does not recognize a message:
+
+```
+Sorry, I didn't quite understand that. Currently, I only know how to flip a coin, roll a dice, or get today's date. Let me know how I can help!
+```
+
+If the user sends an empty message:
+
+```
+Sorry, it looks like your message is empty. Please make sure you send a message and I will give you a response.
+```
 
 ---
 
 ## 🛠️ Technologies Used
 
-* ReactJS
-* Vite
-* JavaScript (ES6+)
-* HTML5
-* CSS3
+* **ReactJS**
+* **JavaScript (ES6+)**
+* **Vite**
+* **CSS Flexbox**
+* **React Hooks (useState, useEffect, useRef)**
 
 ---
 
 ## 📂 Project Structure
 
-```bash
-CHATBOX
+```
+ChatBox
 │
-└── ChatBox
-    │
-    ├── node_modules
-    ├── public
-    │   └── vite.svg
-    │
-    ├── src
-    │   ├── assets
-    │   ├── App.css
-    │   ├── App.jsx
-    │   ├── index.css
-    │   ├── main.jsx
-    │   └── MessageInput.jsx
-    │
-    ├── .gitignore
-    ├── eslint.config.js
-    ├── index.html
-    ├── package.json
-    ├── package-lock.json
-    ├── vite.config.js
-    └── README.md
+├── src
+│   ├── App.jsx
+│   ├── MessageInput.jsx
+│   ├── MessageRender.jsx
+│   ├── profile-images
+│   │   ├── user.png
+│   │   └── robot.png
+│   └── App.css
+│
+├── index.html
+├── package.json
+└── README.md
 ```
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the repository
+Clone the repository:
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
+```
+git clone https://github.com/Hemanthn2003/ChatBox.git
 ```
 
-### 2️⃣ Navigate to the project folder
+Navigate to the project folder:
 
-```bash
+```
 cd ChatBox
 ```
 
-### 3️⃣ Install dependencies
+Install dependencies:
 
-```bash
+```
 npm install
 ```
 
-### 4️⃣ Run the development server
+Run the development server:
 
-```bash
+```
 npm run dev
 ```
 
-The application will start at:
+Open the app in your browser:
 
 ```
 http://localhost:5173
@@ -110,36 +131,27 @@ http://localhost:5173
 
 ---
 
-## 📸 How the Chat Works
-
-1. The user types a message in the input field.
-2. When the **Send** button is clicked, the message is added to the chat.
-3. Each message receives a **unique ID** using `crypto.randomUUID()`.
-4. The chatbot processes the query and returns a response.
-5. Messages are dynamically rendered using React state.
-
----
-
 ## 🎯 Learning Objectives
 
 This project was created to practice:
 
-* React Functional Components
-* React Hooks (`useState`)
-* Event Handling in React
-* Dynamic Rendering of Messages
-* Creating a basic chat interface
+* Building **React functional components**
+* Managing **state and events**
+* Handling **user input**
+* Rendering **dynamic message lists**
+* Implementing **basic chatbot logic**
 
 ---
 
 ## 🔮 Future Improvements
 
-* Add AI chatbot integration
-* Add typing animation
-* Implement auto-scroll for new messages
-* Improve UI design
-* Add message timestamps
-* Connect to backend APIs
+Possible enhancements for this project:
+
+* Add **AI-powered chatbot responses**
+* Implement **typing indicator**
+* Add **message timestamps**
+* Improve **UI design and animations**
+* Store chat history in **local storage or database**
 
 ---
 
@@ -150,8 +162,14 @@ This project was created to practice:
 Electronics & Communication Engineering Graduate
 Aspiring **Mern Stack Developer**
 
----
+
 
 ⭐ If you like this project, consider **starring the repository**.
 
->>>>>>> e6129a310f604fa978f4bea2f2e93ec2df9c0204
+GitHub:
+https://github.com/Hemanthn2003
+
+---
+
+⭐ If you like this project, consider **starring the repository**!
+
