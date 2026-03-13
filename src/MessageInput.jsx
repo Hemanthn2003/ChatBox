@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Chatbot from './chatbotRes';
 
 
 const MessageInput = ({ message, setMessage, texts, setTexts }) => {
